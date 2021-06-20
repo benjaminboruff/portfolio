@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve-dev": "export ELEVENTY_ENV=development&& eleventy --serve --formats=md,html,liquid,njk",
+    "serve-prod": "eleventy --serve --formats=md,html,liquid,njk",
+    "build": "eleventy --formats=md,html,liquid,njk"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "github:11ty/eleventy",
+    "@11ty/eleventy-navigation": "github:11ty/eleventy-navigation",
+    "mini.css": "^3.0.1"
+  }
+}

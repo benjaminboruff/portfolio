@@ -1,0 +1,29 @@
+{% if pagelist %}
+<aside class="pagelist">
+    {%- for project in pagelist -%}
+    <article>
+
+        <h2><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
+
+        {% if project.data.date %} <p class="time"><time datetime={{ project.data.date }}>{{ project.data.date }}</time></p>{% endif %}
+
+        <p>{{ project.data.description }}</p>
+
+    </article>
+    {%- endfor -%}
+</aside>
+{% endif %}
+
+{% if pagination.href.previous or pagination.href.next %}
+<nav class="pagenav">
+
+    {% if pagination.href.previous %}
+        <p><a href="{{ pagination.href.previous }}">previous</a></p>
+    {% endif %}
+
+    {% if pagination.href.next %}
+        <p><a href="{{ pagination.href.next }}">next</a></p>
+    {% endif %}
+
+</nav>
+{% endif %}
