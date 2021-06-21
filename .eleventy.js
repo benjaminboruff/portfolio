@@ -11,6 +11,15 @@ module.exports = (config) => {
   // page navigation
   config.addShortcode("navlist", require("./lib/shortcodes/navlist.js"));
 
+  /* --- FILTERS --- */
+  // format dates
+  const dateformat = require("./lib/filters/dateformat");
+  config.addFilter("datefriendly", dateformat.friendly);
+  config.addFilter("dateymd", dateformat.ymd);
+
+  // format word count and reading time
+  config.addFilter("readtime", require("./lib/filters/readtime"));
+
   /* --- post collection (in src/articles) --- */
   config.addCollection("projects", (collection) =>
     collection

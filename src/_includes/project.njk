@@ -4,9 +4,9 @@
 
 <h1> {{ title }} </h1>
 
-{% if date %} <p class="time"><time datetime="{{date }}">{{ date }}</time></p>{% endif %}
+{% if date %} <p class="time"><time datetime="{{ date | dateymd }}">{{ date | datefriendly }}</time></p>{% endif %}
 
-<p class="words"> {{ content | wordcount }} words</p>
+<p class="words"> {{ content | wordcount | readtime }} words</p>
 
 {{ content | safe }}
 

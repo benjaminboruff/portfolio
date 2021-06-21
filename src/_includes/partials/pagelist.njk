@@ -5,7 +5,7 @@
 
         <h2><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
 
-        {% if project.data.date %} <p class="time"><time datetime={{ project.data.date }}>{{ project.data.date }}</time></p>{% endif %}
+        {% if project.data.date %} <p class="time"><time datetime={{ project.data.date | dateymd }}>{{ project.data.date | datefriendly }}</time></p>{% endif %}
 
         <p>{{ project.data.description }}</p>
 
