@@ -27,7 +27,9 @@ module.exports = (config) => {
       .filter((p) => dev || (!p.data.draft && p.date <= now))
   );
 
-  config.addPassthroughCopy("src/css");
+  /* --- CSS processing --- */
+  config.addWatchTarget("./src/scss/");
+
   return {
     dir: {
       input: "src",
