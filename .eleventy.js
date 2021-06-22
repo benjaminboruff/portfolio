@@ -27,8 +27,12 @@ module.exports = (config) => {
       .filter((p) => dev || (!p.data.draft && p.date <= now))
   );
 
-  /* --- CSS processing --- */
+  /* --- CSS PROCESSING --- */
   config.addWatchTarget("./src/scss/");
+
+  /* --- TRANSFORMS --- */
+  // minify HTML
+  config.addTransform("htmlminify", require("./lib/transforms/htmlminify"));
 
   return {
     dir: {
