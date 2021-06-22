@@ -5,16 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve-dev": "export ELEVENTY_ENV=development&& eleventy --serve --formats=md,html,liquid,njk",
-    "serve-prod": "eleventy --serve --formats=md,html,liquid,njk",
-    "build": "eleventy --formats=md,html,liquid,njk"
+    "serve-dev": "export ELEVENTY_ENV=development&& eleventy --serve --formats=md,html,liquid,njk,11ty.js",
+    "serve-prod": "eleventy --serve --formats=md,html,liquid,njk,11ty.js",
+    "build": "eleventy --formats=md,html,liquid,njk,11ty.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "github:11ty/eleventy",
+    "@11ty/eleventy-img": "github:11ty/eleventy-img",
     "@11ty/eleventy-navigation": "github:11ty/eleventy-navigation",
+    "imagemin": "^7.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^9.0.0",
     "mini.css": "^3.0.1"
   }
 }
