@@ -21,6 +21,7 @@
     "@11ty/eleventy-img": "github:11ty/eleventy-img",
     "@11ty/eleventy-navigation": "github:11ty/eleventy-navigation",
     "cssnano": "^5.0.6",
+    "html-minifier": "^4.0.0",
     "imagemin": "^7.0.1",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.2",
