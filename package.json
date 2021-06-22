@@ -4,10 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve-dev": "export ELEVENTY_ENV=development&& eleventy --serve --formats=md,html,liquid,njk,11ty.js",
-    "serve-prod": "eleventy --serve --formats=md,html,liquid,njk,11ty.js",
-    "build": "eleventy --formats=md,html,liquid,njk,11ty.js"
+    "watch:sass": "sass --watch src/scss:build/css",
+    "build:sass": "sass --style compressed src/scss:build/css",
+    "watch:dev": "export ELEVENTY_ENV=development&& eleventy --serve --formats=md,html,liquid,njk,11ty.js",
+    "watch:prod": "eleventy --serve --formats=md,html,liquid,njk,11ty.js",
+    "start-dev": "npm-run-all  --parallel watch:dev watch:sass",
+    "start-prod": "npm-run-all --parallel watch:prod watch:sass",
+    "build:eleventy": "eleventy --formats=md,html,liquid,njk,11ty.js",
+    "build": "npm-run-all build:*"
   },
   "keywords": [],
   "author": "",
@@ -16,10 +20,13 @@
     "@11ty/eleventy": "github:11ty/eleventy",
     "@11ty/eleventy-img": "github:11ty/eleventy-img",
     "@11ty/eleventy-navigation": "github:11ty/eleventy-navigation",
+    "cssnano": "^5.0.6",
     "imagemin": "^7.0.1",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^9.0.0",
-    "mini.css": "^3.0.1"
+    "mini.css": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.35.1"
   }
 }
