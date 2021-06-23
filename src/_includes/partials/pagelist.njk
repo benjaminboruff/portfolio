@@ -15,15 +15,19 @@
 {% endif %}
 
 {% if pagination.href.previous or pagination.href.next %}
-<nav>
+<nav class="prevnext">
+    <div class="row">
+        <span class="col-sm-4"></span>
 
     {% if pagination.href.previous %}
-        <p><a href="{{ pagination.href.previous }}">previous</a></p>
+        <a class="button navtext col-sm-4" href="{{ pagination.href.previous }}">previous</a>
     {% endif %}
 
     {% if pagination.href.next %}
-        <p><a href="{{ pagination.href.next }}">next</a></p>
+        <a class="button navtext col-sm-4" href="{{ pagination.href.next }}">next</a>
     {% endif %}
 
+        <span class="col-sm-4"></span>
+    </div>
 </nav>
 {% endif %}

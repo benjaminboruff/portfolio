@@ -1,12 +1,12 @@
 ---
-title: portfolio
-description: Benjamin H Boruff's portfolio site
+title: Portfolio
+description: Personal projects
 layout: page.njk
 eleventyNavigation:
   key: home
   order: 100
 ---
 
-portfolio site
+{{ description }}
 
 ... coming soon!

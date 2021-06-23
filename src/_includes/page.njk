@@ -1,24 +1,51 @@
 {% include "partials/htmlhead.njk" %}
 
-<header>
-  <div>
+<header class="row">
+  {# <nav>
     {% navlist collections.all | eleventyNavigation, page, 1 %}
+  </nav> #}
+  <div>
+    <a href="/" class="logo">Benjamin H Boruff</a>
+    <a href="/" class="button">home</a>
+    <a href="/about" class="button">about</a>
+    <a href="/projects" class="button">projects</a>
   </div>
-  <p><a href="/"><img src="/images/hero.jpg" width="1700" height="500" alt="11ty starter">11ty starter</a></p>
+
 </header>
 
 <main>
+
+  <div class="row">
+    <span class="col-sm-4"></span>
+    <img class="hero col-sm-4" src="/images/hero.jpg" alt="11ty starter">
+    <span class="col-sm-4"></span>
+  </div>
+
   {% block content %}
-  <h1 class="row">{{ title }}</h1>
 
-  {{ content | safe}}
+  <div class="row">
+    <span class="col-sm-3"></span>
+    <h1 class="col-sm-6">{{ title }}</h1>
+    <span class="col-sm-3"></span>
+  </div>
+  
+  <div class="row">
+    <span class="col-sm-3"></span>
+    <div class="col-sm-6">
 
-  {% include "partials/pagelist.njk" %}
+    {{ content | safe}}
+
+    {% include "partials/pagelist.njk" %}
+
+    </div>
+    <span class="col-sm-3"></span>
+  </div>
 
   {% endblock %}
+
 </main>
 
-<footer>
+<footer class="sticky">
   <div>
     {% navlist collections.all | eleventyNavigation, page, 2 %}  
   </div>

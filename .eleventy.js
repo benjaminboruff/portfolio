@@ -27,8 +27,8 @@ module.exports = (config) => {
       .filter((p) => dev || (!p.data.draft && p.date <= now))
   );
 
-  /* --- CSS PROCESSING --- */
-  config.addWatchTarget("./src/scss/");
+  /* --- SASS PROCESSING --- */
+  config.addWatchTarget("./src/sass/");
 
   /* --- TRANSFORMS --- */
   // minify HTML

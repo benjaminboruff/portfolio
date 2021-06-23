@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass --watch src/scss:build/css",
-    "build:sass": "sass --style compressed src/scss:build/css",
+    "watch:sass": "sass --watch src/sass:build/css",
+    "build:sass": "sass --style compressed src/sass:build/css",
     "watch:dev": "export ELEVENTY_ENV=development&& eleventy --serve --formats=md,html,liquid,njk,11ty.js",
     "watch:prod": "eleventy --serve --formats=md,html,liquid,njk,11ty.js",
     "start-dev": "npm-run-all  --parallel watch:dev watch:sass",
