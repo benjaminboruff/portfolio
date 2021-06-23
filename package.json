@@ -10,7 +10,7 @@
     "watch:prod": "eleventy --serve --formats=md,html,liquid,njk,11ty.js",
     "start-dev": "npm-run-all  --parallel watch:dev watch:sass",
     "start-prod": "npm-run-all --parallel watch:prod watch:sass",
-    "build:eleventy": "eleventy --formats=md,html,liquid,njk,11ty.js",
+    "build:eleventy": "export ELEVENTY_ENV=production&& eleventy --formats=md,html,liquid,njk,11ty.js",
     "build": "npm-run-all build:*"
   },
   "keywords": [],
@@ -29,6 +29,8 @@
     "inline-source": "^7.2.0",
     "mini.css": "^3.0.1",
     "npm-run-all": "^4.1.5",
+    "rollup": "^2.52.2",
+    "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.35.1"
   }
 }

@@ -37,6 +37,9 @@ module.exports = (config) => {
   // inline assets
   config.addTransform("inline", require("./lib/transforms/inline"));
 
+  /* --- JS PROCESSING --- */
+  config.addWatchTarget("./src/js/");
+
   return {
     dir: {
       input: "src",
