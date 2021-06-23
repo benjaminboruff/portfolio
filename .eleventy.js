@@ -34,6 +34,9 @@ module.exports = (config) => {
   // minify HTML
   config.addTransform("htmlminify", require("./lib/transforms/htmlminify"));
 
+  // inline assets
+  config.addTransform("inline", require("./lib/transforms/inline"));
+
   return {
     dir: {
       input: "src",
